@@ -689,8 +689,13 @@ html, body {
     position: absolute;
     font-size: 150px;
     color: #DE7E73;
-    text-shadow: 1px 1px 2px gray, 0 0 25px #DE7E73, 0 0 5px #F7AA97;
-    
+    text-shadow: 1px 1px 2px gray, 0 0 25px #DE7E73, 0 0 5px #F7AA97; 
+}
+
+.L1:hover{
+    font-size: 300px;
+    transform: rotate(-30deg);
+    color: black;
 }
 
 .L1_1{
@@ -795,6 +800,12 @@ html, body {
     bleed:10px;
 }
 
+.L6_1:hover{
+    font-size: 300px;
+    transform: rotate(-30deg);
+    color: black;
+}
+
 .L6_2 {
     color: white;
     font-family: 'Cinzel', serif;
@@ -806,6 +817,12 @@ html, body {
     transform: rotate(-90deg);
     position: absolute;
     overflow: hidden;
+}
+
+.L6_2:hover{
+    font-size: 500px;
+    transform: rotate(-30deg);
+    color: black;
 }
 
 .L7 {
