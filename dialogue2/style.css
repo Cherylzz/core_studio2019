@@ -505,6 +505,307 @@ html, body {
     transform: rotate(30deg);
 }
 
+/*messy bedroom*/
+
+.dbedroom{
+    margin-left: 7300px;
+    margin-top: 5px;
+    position: absolute;
+}
+
+.dmat{
+    width:700px;
+    height:330px;
+    background-color: white;
+    position: absolute;
+    margin-left: 1375px;
+    margin-top: 280px;
+    border-style: solid;
+    border-color: #F7AA97;
+    border-radius: 10px;
+}
+.dbed{
+    width: 450px;
+    height: 530px;
+    background-color: #F7AA97;
+    margin-left: 1500px;
+    margin-top: 50px;
+    position: absolute;
+}
+
+.dwood1{
+    width:525px;
+    height:40px;
+    background-color: #CFAA9E;
+    margin-left: 1465px;
+    margin-top: 20px;
+    position: absolute;
+    border-style:inset; 
+}
+
+.dwood2{
+    width:505px;
+    height:30px;
+    background-color: #CFAA9E;
+    margin-left: 1475px;
+    margin-top: 560px;
+    position: absolute; 
+    border-style:inset;
+}
+
+.dpillow1{
+    width:170px;
+    height:100px;
+    background-color: #DE7E73;
+    margin-left: 1535px;
+    margin-top: 80px;
+    position: absolute;
+    border-radius: 20px;
+    border-style:inset;
+/*    box-shadow: 10px 30px 50px 30px yellow;*/
+}
+
+.dpillow2{
+    width:170px;
+    height: 100px;
+    background-color: #DE7E73;
+    margin-left: 1745px;
+    margin-top: 80px;
+    position: absolute;
+    border-radius: 20px;
+    border-style:inset;
+}
+
+.dblanket1{
+    width: 500px;
+    height:56px;
+    background-color: #aacfd0;
+    margin-left: 1475px;
+    margin-top: 300px;
+    position: absolute;
+    border-radius: 10px;
+    border-style:inset;
+}
+
+.dblanket2{
+    width:478px;
+    height:100px;
+    background-color: #DE7E73;
+    margin-left: 1485px;
+    margin-top:360px;
+    position: absolute;
+    border-style:inset;
+}
+
+.dclothes1{
+    width:90px;
+    height:60px;
+    background-color: gray;
+    margin-top: 300px;
+    margin-left: 1500px;
+    border-radius: 10px;
+    position: absolute;
+    transform: rotate(-10deg);
+}
+
+.dclothes2{
+    width:150px;
+    height:90px;
+    background-color: lightgoldenrodyellow;
+    margin-top: 400px;
+    margin-left: 1600px;
+    border-radius: 10px;
+    position: absolute;
+    transform: rotate(40deg);
+}
+
+.dclothes3{
+    width:120px;
+    height:80px;
+    background-color: lightpink;
+    margin-top: 400px;
+    margin-left: 1600px;
+    border-radius: 10px;
+    position: absolute;
+    transform: rotate(-20deg);
+}
+
+.dclothes4{
+    width:80px;
+    height:90px;
+    background-color: plum;
+    margin-top: 400px;
+    margin-left: 1800px;
+    border-radius: 10px;
+    position: absolute;
+    transform: rotate(-20deg);
+}
+
+.dclothes5{
+    width:70px;
+    height:80px;
+    background-color: darkseagreen;
+    margin-top: 300px;
+    margin-left: 1700px;
+    border-radius: 10px;
+    position: absolute;
+    transform: rotate(20deg);
+}
+
+.dclothes6{
+    width:100px;
+    height:70px;
+    background-color: peachpuff;
+    margin-top: 300px;
+    margin-left: 1850px;
+    border-radius: 10px;
+    position: absolute;
+    transform: rotate(40deg);
+}
+
+.ddesk1{
+    width:150px;
+    height:100px;
+    background-color: #CFAA9E;
+    position: absolute;
+    margin-left: 1200px;
+    margin-top: 80px;
+    border-style:inset;
+}
+
+.dlight{
+    width: 60px;
+    height:60px;
+    background-color: lightgoldenrodyellow;
+    margin-left: 1230px;
+    margin-top: 88px;
+    position: absolute;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 20px yellow;
+    animation-name:flash;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.ddesk2{
+    width:120px;
+    height:200px;
+    background-color: #CFAA9E;
+    position: absolute;
+    margin-left: 1200px;
+    margin-top: 300px;
+    border-style:inset;
+}
+
+.dred{
+    width:30px;
+    height:40px;
+    transform: rotate(-30deg);
+    background-color: indianred;
+    position: absolute;
+    margin-left: 1255px;
+    margin-top: 400px;
+    border-radius: 20px;
+}
+
+.dpurple{
+    width:40px;
+    height:34px;
+    transform: rotate(160deg);
+    background-color: mediumpurple;
+    position: absolute;
+    margin-left: 1220px;
+    margin-top: 400px;
+    border-radius: 20px;
+}
+
+.dblue{
+    width:40px;
+    height:20px;
+    transform: rotate(70deg);
+    background-color: skyblue;
+    position: absolute;
+    margin-left: 1230px;
+    margin-top: 450px;
+    border-radius: 20px;
+}
+
+.dgreen{
+    width:30px;
+    height:19px;
+    transform: rotate(10deg);
+    background-color: darkseagreen;
+    position: absolute;
+    margin-left: 1230px;
+    margin-top: 350px;
+    border-radius: 20px;
+}
+
+.dgray {
+    width:30px;
+    height:19px;
+    transform: rotate(30deg);
+    background-color: slategray;
+    position: absolute;
+    margin-left: 1260px;
+    margin-top: 330px;
+    border-radius: 20px;
+}
+
+.dchair{
+    width:70px;
+    height: 70px;
+    background-color: #DE7E73;
+    margin-left: 1330px;
+    margin-top: 350px;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.dtrashcan{
+    width:80px;
+    height: 80px;
+    border-radius: 100px;
+    background-color: lightgray;
+    margin-top: 400px;
+    margin-left: 2100px;
+    border-style: solid;
+    border-color: darkgray;
+    position: absolute;
+}
+
+.dtrash1{
+    width:30px;
+    height: 40px;
+    background-color: blanchedalmond;
+    margin-left: 2110px;
+    margin-top: 415px;
+    position: absolute;
+}
+
+.dtrash2{
+    width:20px;
+    height: 30px;
+    background-color: aliceblue;
+    margin-left: 2150px;
+    margin-top: 430px;
+    position: absolute;
+    transform: rotate(30deg);
+}
+
 
 /*bedroom2*/
 .fbedroom{
