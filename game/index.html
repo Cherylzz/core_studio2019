@@ -1,0 +1,126 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Honorificabilitudinitatibus</title>
+    <link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>    
+<script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+   
+<!--
+<body style="width:100%; height: 100%; background-color: white;" onclick="showCoords(event)">
+   
+    <script>
+          function showCoords(event) {
+              var x = event.clientX;
+              var y = event.clientY;
+              var coords = "X coords: " + x + ", Y coords: " + y;
+              document.getElementById("demo").innerHTML = coords;
+          }
+    </script>
+-->
+      
+    <div class="title">HONORIFICABILITUDINITATIBUS</div> 
+      
+    <div class="sky"><img src="../images/sky.jpg" alt="sky" width="100%" height="100%">
+    </div>
+    
+    <div class="road"><img src="../images/grass.PNG" alt="road" width="80%" height="auto"></div>
+    
+    <div class="zebra"><img src="../images/zebraa.png" alt="zebra" width="30%" height="auto">
+    </div>
+     
+    <div class="zebra"><img src="../images/zebraa.png" alt="zebra" width="30%" height="auto">
+    </div>
+    
+    <div class="lion"><img src="../images/lion.png" alt="lion" width=20%" height="auto">
+    </div>
+    
+    <div class="animatableFood appleH"><img src="../images/appleH.png" alt="cube" width="20%" height="auto">
+    </div>
+    
+    <div class="animatableFood vegN"><img src="../images/vegN.png" alt="cube" width="20%" height="auto">
+    </div>
+    
+    <div class="animatableFood carrotO"><img src="../images/carrotO.png" alt="cube" width="8%" height="auto">
+    </div>
+    
+    <div class="animatableFood cornO"><img src="../images/cornO.png" alt="cube" width="22%" height="auto">
+    </div>
+    
+    <div class="button">
+    <button>Start</button>
+    </div>
+    
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+  
+<script> 
+$(document).ready(function(){
+  $("button").click(function(){
+    $(".animatableFood").animate({
+      Down: '250px',
+      opacity: '0.5',
+      height: '150px',
+      width: '150px',
+        top: '+50%'
+    }, 1000, function(){
+        // once animation is complete:
+        console.log("test?")
+        $(".animatableFood").css({"opacity" : 0})
+        
+    });
+    // our function has variables of id, class, imageurl, and time, we could also add new variables to the list
+    var appendNewFood = function(id, ourclass, image, time){
+        // add a new food to the page:
+        $("body").append('<div id="'+id+'" class="'+ourclass+'" ><img src="'+image+'" alt="cube" width="20%" height="auto"></div>')
+        // animate the new food: 
+          $("#" + id).animate({
+              top: "90%"
+          }, time, function(){
+            $(this).remove()
+          })    
+    }
+    // on start add a new food immediatly:
+    appendNewFood("newApple", "lukasappleH", "../images/appleH.png", 5000)
+    
+      // every second, add a new food, with a random time and a random id
+    setInterval(function(){
+        var thisTime = Math.random()*2000 + 1000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newApple-" + idNumber, "lukasappleH", "../images/appleH.png", thisTime)
+    }, 1000)  
+  });
+});
+    
+////////////////////////////////////////////////
+      
+    var appendNewFood = function(id, ourclass, image, time){
+        // add a new food to the page:
+        $("body").append('<div id="'+id+'" class="'+ourclass+'" ><img src="'+image+'" alt="cube" width="20%" height="auto"></div>')
+        // animate the new food: 
+          $("#" + id).animate({
+              top: "90%"
+          }, time, function(){
+            $(this).remove()
+          })    
+    }
+    // on start add a new food immediatly:
+    appendNewFood("newCorn", "cherylcornO", "../images/cornO.png", 5000)
+    
+      // every second, add a new food, with a random time and a random id
+    setInterval(function(){
+        var thisTime = Math.random()*2000 + 1000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCorn-" + idNumber, "cherylcornO", "../images/cornO.png", thisTime)
+    }, 1000)  
+
+
+</script> 
+
+    
+</body>
+</html>

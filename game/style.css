@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|VT323');
+
+
+.title {
+    position: absolute;
+    left: 20%;
+    font-family: 'press start 2P';
+    font-size: 25;
+    top:2%;
+}
+
+body {
+    padding:0;
+    margin: 0;
+}
+
+.sky {
+    position:absolute;
+    z-index: -3;
+    overflow: hidden;
+}
+
+.road {
+    left: 15%;
+    position: absolute;
+    z-index: -3;
+}
+
+.zebra {
+    position: absolute;
+    width: 30%;
+    top: 70%;
+    left: 42%;
+    z-index: 8;
+}
+
+.lion {
+    position: absolute;
+    width: 25%;
+    top: 30%;
+    left: 42%;
+    z-index: 8;
+}
+
+.cornO {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    z-index: 5;
+}
+
+.vegN {
+    position: absolute;
+    left: 40%;
+    top: 28%;
+    z-index: 5;
+}
+
+.carrotO {
+    position: absolute;
+    left: 50%;
+    top: 17%;
+    z-index: 5;
+}
+
+.appleH {
+    position: absolute;
+    left: 40%;
+    top: 55%;
+    z-index: 5;
+}
+
+.lukasappleH{
+    position: absolute;
+    left: 43%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylcornO{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    z-index: 5;
+}
+
+.button {
+    top: 40%;
+}
