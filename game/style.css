@@ -125,7 +125,7 @@ body {
 .lion1{
     width: 50%;
     position: absolute;
-    left: 40%;
+    left: 51%;
     top: 0%;
     z-index: 5;
 }
@@ -138,10 +138,10 @@ body {
     z-index: 5;
 }
 
-.cherylcarrotC{
+.cherylappleC{
     width: 20%;
     position: absolute;
-    left: 50%;
+    left: 40%;
     top: 0%;
     z-index: 5;
 }
