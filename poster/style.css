@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Cabin+Sketch|Elsie|Fredericka+the+Great|Special+Elite');
+@import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Federo|Frijole|Julius+Sans+One');
 
 @import url('https://fonts.googleapis.com/css?family=Cute+Font');
 
@@ -10,16 +10,17 @@
 }
 
 .title{
-    color:red; 
+    color:#5A9367; 
     width:1230px;
-    font-family: 'cute font';  
+    font-family: 'Carrois Gothic SC', sans-serif;  
     font-size: 50px;
 }
 
 .title2{
-    color:red;
-    width:1200px;
-    font-family: 'cute font';  
+    color:#F17F42;
+    margin-top: 10%;
+    width:1500px;
+    font-family: 'Carrois Gothic SC', sans-serif;  
     font-size: 50px;
     margin-left: 40%;
     position: absolute;
@@ -27,55 +28,29 @@
 }
 
 .title3{
-    color:red;
+    color:#9baec8;
     width:800px;
-    font-family: 'cute font';  
-    font-size: 70px;
-    margin-top: 20%;
+    font-family: 'Carrois Gothic SC', sans-serif;  
+    font-size: 50px;
+    margin-top: 50%;
     position: absolute;
     transform:rotate(-60deg);
 }
 
-/*
-
-.box1 { 
-    width:60px;
-    height:1050px;
-    background-color: #bfdce7;
-    left:5px;
-    position:absolute;
-    z-index: -1;
-    transform: rotate(30deg);  
+.title4{
+    color:#d64072;
+    width:800px;
+    font-family: 'Carrois Gothic SC', sans-serif; 
+    font-size: 50px;
+    margin-top: 20%;
+    margin-left: 40%;
+    position: absolute;
+    transform:rotate(200deg);
 }
-
-
-.box2 { 
-    width:60px;
-    height:1050px;
-    background-color: #bfdce7;
-    left:5px;
-    position:absolute;
-    z-index: -1;
-    transform: rotate(-30deg);  
-}
-*/
-
-/*
-.box3 { 
-    width:60px;
-    height:1050px;
-    background-color: #bfdce7;
-    right:5px;
-    position:absolute;
-    z-index: -1;
-    transform: rotate(30deg);  
-}
-*/
-
 
 html, body{
     width:30%;
-    background-color: black;
+    background-color: #EFDC05;
 }
 
 .container{
@@ -86,26 +61,13 @@ html, body{
 /*    border: 1px solid;*/
 }
 
-@media screen and (max-width: 600px) and (min-width: 400px), (min-width: 900px) {
-  div.item1 {
-     width: 410px;
-    height: 300px;
-    border: 1px solid;
-    background-color:white;
-    color: black;
-    font-family:'Cute font';
-    font-size: 60px;
-    margin-left:18%;
-  }
-}
-
 .item1{
     width: 410px;
     height: 300px;
     border: 1px solid;
-    background-color:white;
-    color: black;
-    font-family:'Cute font';
+    background-color:black;
+    color: #EFDC05;
+    font-family: 'Carrois Gothic SC', sans-serif; 
     font-size: 60px;
     margin-left:18%;
 }
@@ -128,17 +90,19 @@ html, body{
 .item1 p{
     animation-name: hinge;
     animation-duration: 6s;
-    margin-left: 250px;
+    margin-left: 100px;
+    margin-top: 50px;
     animation-iteration-count: infinite;
 }
 
 .item2{
-    width: 750px;
+    width: 900px;
     height: 300px;
     border: 1px solid;
-    background-color: gainsboro;
-    color:black;
-    font-family:'Cute font';
+    margin-left: 160%;
+    background-color: black;
+    color:#EFDC05;
+    font-family: 'Carrois Gothic SC', sans-serif; 
     font-size: 20px;
     transition-duration: 1s;
 }
@@ -155,7 +119,7 @@ html, body{
     left:0;
     top:0;
     transform: translate(12%,60%);
-    margin-top: 100px;
+    margin-top: 10px;
     font-size: 30px;
     
 }
@@ -164,9 +128,9 @@ html, body{
     width: 500px;
     height: 300px;
     border: 1px solid;
-    background-color: lightgray;
-    color:black;
-    font-family:'Cute font';
+    background-color: black;
+    color:#EFDC05;
+    font-family: 'Carrois Gothic SC', sans-serif; 
 
     
     transition-duration: 1s;
@@ -197,9 +161,10 @@ html, body{
     width: 400px;
     height: 250px;
     border: 1px solid;
-    background-color: dimgray;
-    color:black;
-    font-family:'Cute font';
+    margin-left: 200%;
+    background-color: black;
+    color:#EFDC05;
+    font-family: 'Carrois Gothic SC', sans-serif; 
     font-size: 20px;
     
     transition-duration: 1s;
@@ -209,11 +174,8 @@ html, body{
 
 .item4 p{
     width:80%;
-    text-align: left;
-    left:0;
-    top:0;
     transform: translate(18%,100%);
-    margin-top: 10%;
+    margin-bottom: 200px;
     font-size: 30px;
 }
 .item4:hover {

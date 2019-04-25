@@ -28,27 +28,11 @@
     </div>
     
     <div class="road"><img src="../images/grass.PNG" alt="road" width="80%" height="auto"></div>
-    
-    <div class="zebra"><img src="../images/zebraa.png" alt="zebra" width="30%" height="auto">
-    </div>
      
     <div class="zebra"><img src="../images/zebraa.png" alt="zebra" width="30%" height="auto">
     </div>
     
-    <div class="lion"><img src="../images/lion.png" alt="lion" width=20%" height="auto">
-    </div>
-    
-    <div class="animatableFood appleH"><img src="../images/appleH.png" alt="cube" width="20%" height="auto">
-    </div>
-    
-    <div class="animatableFood vegN"><img src="../images/vegN.png" alt="cube" width="20%" height="auto">
-    </div>
-    
-    <div class="animatableFood carrotO"><img src="../images/carrotO.png" alt="cube" width="8%" height="auto">
-    </div>
-    
-    <div class="animatableFood cornO"><img src="../images/cornO.png" alt="cube" width="22%" height="auto">
-    </div>
+   
     
     <div class="button">
     <button>Start</button>
@@ -83,42 +67,98 @@ $(document).ready(function(){
           })    
     }
     // on start add a new food immediatly:
-    appendNewFood("newApple", "lukasappleH", "../images/appleH.png", 5000)
     
       // every second, add a new food, with a random time and a random id
-    setInterval(function(){
-        var thisTime = Math.random()*2000 + 1000;
+    // appleH
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 2000;
         var idNumber = Math.round(Math.random()*1000)
         
         appendNewFood("newApple-" + idNumber, "lukasappleH", "../images/appleH.png", thisTime)
-    }, 1000)  
-  });
-});
+    }, 1000) 
     
-////////////////////////////////////////////////
+      //cornO
+
       
-    var appendNewFood = function(id, ourclass, image, time){
-        // add a new food to the page:
-        $("body").append('<div id="'+id+'" class="'+ourclass+'" ><img src="'+image+'" alt="cube" width="20%" height="auto"></div>')
-        // animate the new food: 
-          $("#" + id).animate({
-              top: "90%"
-          }, time, function(){
-            $(this).remove()
-          })    
-    }
-    // on start add a new food immediatly:
-    appendNewFood("newCorn", "cherylcornO", "../images/cornO.png", 5000)
-    
-      // every second, add a new food, with a random time and a random id
-    setInterval(function(){
-        var thisTime = Math.random()*2000 + 1000;
+    setTimeout(function(){
+        var thisTime = Math.random()*1000 + 3200;
         var idNumber = Math.round(Math.random()*1000)
         
         appendNewFood("newCorn-" + idNumber, "cherylcornO", "../images/cornO.png", thisTime)
-    }, 1000)  
+    }, 3000) 
+      
+      // vegN  
+    setTimeout(function(){
+        var thisTime = Math.random()*1000 + 3000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newVeg-" + idNumber, "cherylvegN", "../images/vegN.png", thisTime)
+    }, 4000) 
+      
+    // carrotO
+      // run the animation immediately
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 5000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCarrot-" + idNumber, "cherylcarrotO", "../images/carrotO.png", thisTime)
+    }, 5000) 
+      
+    //appleR
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 7000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newAppleR" + idNumber, "cherylappleR", "../images/appleR.png", thisTime)
+    }, 6000) 
+    
+    //carrotI
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 4000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCarrotI" + idNumber, "cherylcarrotI", "../images/carrotI.png", thisTime)
+    }, 9000) 
+    
+    //lion1
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 3000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("lion1" + idNumber, "lion1", "../images/lion.png", thisTime)
+    }, 11000) 
+      
+    //cornnF
+       setTimeout(function(){
+        var thisTime = Math.random()*1000 + 4000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCornF" + idNumber, "cherylcornF", "../images/cornF.png", thisTime)
+    }, 12000)
+    
+    //carrotI
+     setTimeout(function(){
+        var thisTime = Math.random()*1000 + 4000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCarrotI" + idNumber, "cherylcarrotI", "../images/carrotI.png", thisTime)
+    }, 13000) 
+      
+    //carrotC
+     setTimeout(function(){
+        var thisTime = Math.random()*1000 + 3000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCarrotC" + idNumber, "cherylcarrotC", "../images/carrotC.png", thisTime)
+    }, 14000) 
+      
+  });
+});
+    
+    
+    
 
-
+    
 </script> 
 
     
