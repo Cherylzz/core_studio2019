@@ -3,10 +3,34 @@
 
 
 
-@media screen and (max-width: 768px) {
-  .road{
-    width: 100%; 
-  }
+  @media only screen 
+  and (max-device-width: 405px) 
+  and (max-device-width: 852px) 
+  and (-webkit-min-device-pixel-ratio: 3) {  
+    .road {
+        height: 125  
+    }
+      
+    .title {
+    position: absolute;
+    left: 20%;
+    font-family: 'press start 2P';
+    font-size: 20;
+    top:2%;
+    }
+    
+    .body {
+    background-image: url("../images/sky.jpg");
+    width: 350px;
+    height: 800px;
+    }
+}
+
+/*laptop*/
+
+.myVideo{
+    position: relative;
+    z-index: -5;
 }
 
 .title {
@@ -20,18 +44,36 @@
 body {
     padding:0;
     margin: 0;
-}
-
-.sky {
-    position:absolute;
-    z-index: -3;
     overflow: hidden;
 }
 
+.sky {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    z-index: -5;
+}
+
+.button {
+    border-radius: 50%;
+    height: 100px;
+}
+
+.button: hover{
+    opacity: 0.3;
+}
+
 .road {
-    left: 15%;
-    position: absolute;
+    position: fixed;
     z-index: -3;
+    left: 20%;
+    min-height: 100vh;
+    max-height: 175vh;
+    width: auto;
+}
+
+.flying {
+    width: 200px;
 }
 
 .zebra {
@@ -42,31 +84,33 @@ body {
     z-index: 8;
 }
 
+/*
 .lion {
     position: absolute;
-    width: 25%;
+    width: 15%;
     top: 30%;
-    left: 52%;
+    left: 40%;
     z-index: 8;
 }
+*/
 
 .cornO {
     position: absolute;
-    left: 50%;
+    left: 65%;
     top: 40%;
     z-index: 5;
 }
 
 .vegN {
     position: absolute;
-    left: 40%;
+    left: 60%;
     top: 28%;
     z-index: 5;
 }
 
 .carrotO {
     position: absolute;
-    left: 50%;
+    left: 70%;
     top: 17%;
     z-index: 5;
 }
@@ -87,21 +131,21 @@ body {
 
 .cherylcornO{
     position: absolute;
-    left: 50%;
+    left: 40%;
     top: 0%;
     z-index: 5;
 }
 
 .cherylvegN{
     position: absolute;
-    left: 40%;
+    left: 30%;
     top: 0%;
     z-index: 5;
 }
 
 .cherylcarrotO{
     position: absolute;
-    left: 50%;
+    left: 20%;
     top: 0%;
     z-index: 5;
 }
@@ -125,7 +169,7 @@ body {
 .lion1{
     width: 50%;
     position: absolute;
-    left: 51%;
+    left: 40%;
     top: 0%;
     z-index: 5;
 }
@@ -146,6 +190,183 @@ body {
     z-index: 5;
 }
 
-.button {
-    top: 40%;
+.cherylvegA{
+    width: 50%;
+    position: absolute;
+    left: 40%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylappleB{
+    width: 20%;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylcornI2{
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylappleL{
+    width: 40%;
+    position: absolute;
+    left: 45%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylvegI{
+    width: 30%;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylcornT{
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylcarrotU{
+    width: 30%;
+    position: absolute;
+    left: 40%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylappleD{
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylcornI{
+    width: 20%;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylvegN{
+    width: 50%;
+    position: absolute;
+    left: 40%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylcarrotI{
+    width: 20%;
+    position: absolute;
+    left: 45%;
+    top: 0%;
+    z-index: 5;
+}
+
+
+.cherylappleT{
+    width: 20%;
+    position: absolute;
+    left: 70%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylvegA{
+    width: 30%;
+    position: absolute;
+    left: 60%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylcornT2{
+    width: 40%;
+    position: absolute;
+    left: 45%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylappleB2{
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylvegU{
+    width: 30%;
+    position: absolute;
+    left: 45%;
+    top: 0%;
+    z-index: 5;
+}
+
+.cherylcornS{
+    width: 30%;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    z-index: 5;
+}
+
+button {
+    background-color: white;
+    color: #328ee5;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 5%;
+    font-family: 'press start 2P';
+    border-radius: 50px;
+}
+
+button: hover {
+    transform: scale(1.2);
+}
+
+button:after{
+    color: skyblue;
+    font-family: 'press start 2P';
+    content: 'the more you click';
+    display: block;
+    }
+
+button:hover:after,
+button:focus:after,
+button:active:after{
+    color: darkseagreen;
+    font-family: 'press start 2P';
+    content: 'the harder it gets';
+    display: block;
+    }
+
+
+.gameOver {
+    left: 38%;
+    font-size: 30;
+    position: absolute;
+    font-family: 'press start 2P';
+    top: 30%;
+    z-index: 7; 
+}
+
+.caught{
+    display: none;
 }

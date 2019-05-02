@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <title> Honorificabilitudinitatibus</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>    
 <script type="text/javascript" src="script.js"></script>
 </head>
@@ -21,27 +22,99 @@
           }
     </script>
 -->
+
       
-    <div class="title">HONORIFICABILITUDINITATIBUS</div> 
+<!--
+   <video autoplay muted loop id="myVideo">
+  <source src="../images/skyblue.mp4" type="video/mp4" width="100%">
+</video>
+ 
+  <script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
       
-    <div class="sky"><img src="../images/sky.jpg" alt="sky" width="100%" height="100%">
-    </div>
-    
-    <div class="road"><img src="../images/grass.PNG" alt="road" width="80%" height="auto"></div>
-     
-    <div class="zebra"><img src="../images/zebraa.png" alt="zebra" width="30%" height="auto">
-    </div>
-    
+</script>
+-->
    
-    
-    <div class="button">
-    <button>Start</button>
+    <div class="sky"><img src="../gif/skyyy.gif" alt="sky" width="120%" height="100%">
     </div>
+<!--
+    
+    <video autoplay muted loop id="myVideo">
+  <source src="../images/skyblue.mp4" type="video/mp4">
+</video>
+-->
+   
+    <div class="title">
+    <span class="H">H</span><span 
+    class="O1">O</span><span
+    class="N1">N</span><span
+    class="O2">O</span><span
+    class="R">R</span><span
+    class="I1">I</span><span
+    class="F">F</span><span
+    class="I2">I</span><span
+    class="C">C</span><span
+    class="A1">A</span><span
+    class="B">B</span><span
+    class="I3">I</span><span
+    class="L">L</span><span
+    class="I4">I</span><span
+    class="T1">T</span><span
+    class="U1">U</span><span
+    class="D">D</span><span
+    class="I5">I</span><span
+    class="N2">N</span><span
+    class="I6">I</span><span
+    class="T2">T</span><span
+    class="A2">A</span><span
+    class="T3">T</span><span
+    class="I7">I</span><span
+    class="B">B</span><span
+    class="U2">U</span><span
+    class="S">S</span>
+     </div> 
+      
+    <div class="road"><img src="../images/road.PNG" alt="road" width="70%" height="110%"></div>
+     
+    <div class="zebra"><img src="../images/zebraa.png" alt="zebra" width="30%" height="auto" class="zebraImg">
+    </div>
+    
+<!--    <div class="flying"><img src="../gif/flying.gif" ></div>-->
+    
+    <div class="gameOver" button value="Refresh Page">
+        <a href="../game/game_over/index.html">Game Over</a>
+    </div>
+    
+    
+    <div class="reward" button value="Refresh Page">   <a href="../game/reward/index.html"></a></div>
+    <div class="button">
+    <button>START!</button>
+    </div>
+    
+
     
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
   
 <script> 
+
+    
 $(document).ready(function(){
+
+$(".flying").hide();
+$(".gameOver").hide();
+
+    
   $("button").click(function(){
     $(".animatableFood").animate({
       Down: '250px',
@@ -56,14 +129,22 @@ $(document).ready(function(){
         
     });
     // our function has variables of id, class, imageurl, and time, we could also add new variables to the list
-    var appendNewFood = function(id, ourclass, image, time){
+    var appendNewFood = function(id, ourclass, image, time, letter){
         // add a new food to the page:
-        $("body").append('<div id="'+id+'" class="'+ourclass+'" ><img src="'+image+'" alt="cube" width="20%" height="auto"></div>')
+        $("body").append('<div id="'+id+'" data-letter="'+ letter +'" class="fruit ' +ourclass+'" ><img src="'+image+'" alt="cube" width="20%" height="auto"></div>')
         // animate the new food: 
           $("#" + id).animate({
-              top: "90%"
+              top: "99%"
           }, time, function(){
-            $(this).remove()
+                if($("#" + id).hasClass("caught")){
+                    
+                } else{
+                    $(".gameOver").show();
+                    console.log("GAME OVER"); 
+                 window.location.replace("../game/game_over/index.html");
+                }
+              
+//            $(this).remove()
           })    
     }
     // on start add a new food immediatly:
@@ -74,8 +155,8 @@ $(document).ready(function(){
         var thisTime = Math.random()*1000 + 2000;
         var idNumber = Math.round(Math.random()*1000)
         
-        appendNewFood("newApple-" + idNumber, "lukasappleH", "../images/appleH.png", thisTime)
-    }, 1000) 
+        appendNewFood("newApple-" + idNumber, "lukasappleH", "../images/appleH.png", thisTime, "H")
+    }, 1000)
     
       //cornO
 
@@ -84,7 +165,7 @@ $(document).ready(function(){
         var thisTime = Math.random()*1000 + 3200;
         var idNumber = Math.round(Math.random()*1000)
         
-        appendNewFood("newCorn-" + idNumber, "cherylcornO", "../images/cornO.png", thisTime)
+        appendNewFood("newCorn-" + idNumber, "cherylcornO", "../images/cornO.png", thisTime, "O1")
     }, 3000) 
       
       // vegN  
@@ -92,24 +173,24 @@ $(document).ready(function(){
         var thisTime = Math.random()*1000 + 3000;
         var idNumber = Math.round(Math.random()*1000)
         
-        appendNewFood("newVeg-" + idNumber, "cherylvegN", "../images/vegN.png", thisTime)
+        appendNewFood("newVeg-" + idNumber, "cherylvegN", "../images/vegN.png", thisTime, "N1")
     }, 4000) 
       
     // carrotO
       // run the animation immediately
       setTimeout(function(){
-        var thisTime = Math.random()*1000 + 5000;
+        var thisTime = Math.random()*1000 + 4000;
         var idNumber = Math.round(Math.random()*1000)
         
-        appendNewFood("newCarrot-" + idNumber, "cherylcarrotO", "../images/carrotO.png", thisTime)
+        appendNewFood("newCarrot-" + idNumber, "cherylcarrotO", "../images/carrotO.png", thisTime, "O2")
     }, 5000) 
       
     //appleR
       setTimeout(function(){
-        var thisTime = Math.random()*1000 + 7000;
+        var thisTime = Math.random()*1000 + 5000;
         var idNumber = Math.round(Math.random()*1000)
         
-        appendNewFood("newAppleR" + idNumber, "cherylappleR", "../images/appleR.png", thisTime)
+        appendNewFood("newAppleR" + idNumber, "cherylappleR", "../images/appleR.png", thisTime, "R")
     }, 6000) 
     
     //carrotI
@@ -117,23 +198,25 @@ $(document).ready(function(){
         var thisTime = Math.random()*1000 + 4000;
         var idNumber = Math.round(Math.random()*1000)
         
-        appendNewFood("newCarrotI" + idNumber, "cherylcarrotI", "../images/carrotI.png", thisTime)
+        appendNewFood("newCarrotI" + idNumber, "cherylcarrotI", "../images/carrotI.png", thisTime, "I1")
     }, 9000) 
     
     //lion1
-      setTimeout(function(){
-        var thisTime = Math.random()*1000 + 3000;
-        var idNumber = Math.round(Math.random()*1000)
-        
-        appendNewFood("lion1" + idNumber, "lion1", "../images/lion.png", thisTime)
-    }, 11000) 
+//      setTimeout(function(){
+//        var thisTime = Math.random()*1000 + 3000;
+//        var idNumber = Math.round(Math.random()*1000)
+//        
+//        appendNewFood("lion1" + idNumber, "lion1", "../images/lion.png", thisTime, "O")
+//    }, 11000) 
+//      
+//    
       
-    //cornnF
+    //cornF
        setTimeout(function(){
         var thisTime = Math.random()*1000 + 4000;
         var idNumber = Math.round(Math.random()*1000)
         
-        appendNewFood("newCornF" + idNumber, "cherylcornF", "../images/cornF.png", thisTime)
+        appendNewFood("newCornF" + idNumber, "cherylcornF", "../images/cornF.png", thisTime, "F")
     }, 12000)
     
     //carrotI
@@ -141,7 +224,7 @@ $(document).ready(function(){
         var thisTime = Math.random()*1000 + 4000;
         var idNumber = Math.round(Math.random()*1000)
         
-        appendNewFood("newCarrotI" + idNumber, "cherylcarrotI", "../images/carrotI.png", thisTime)
+        appendNewFood("newCarrotI" + idNumber, "cherylcarrotI", "../images/carrotI.png", thisTime, "I2")
     }, 13000) 
       
     //appleC
@@ -149,8 +232,155 @@ $(document).ready(function(){
         var thisTime = Math.random()*1000 + 2500;
         var idNumber = Math.round(Math.random()*1000)
         
-        appendNewFood("newAppleC" + idNumber, "cherylappleC", "../images/appleC.png", thisTime)
+        appendNewFood("newAppleC" + idNumber, "cherylappleC", "../images/appleC.png", thisTime, "C")
     }, 15000) 
+      
+    
+    //vegA
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 2000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newVegA" + idNumber, "cherylvegA", "../images/vegA.png", thisTime, "A1")
+    }, 16000)
+      
+    //appleB
+       setTimeout(function(){
+        var thisTime = Math.random()*1000 + 2000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newAppleB" + idNumber, "cherylappleB", "../images/appleB.png", thisTime, "B")
+    }, 17500)
+    
+    //cornI
+       setTimeout(function(){
+        var thisTime = Math.random()*1000 + 3000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCornI" + idNumber, "cherylcornI2", "../images/cornI.png", thisTime, "I3")
+    }, 19000)
+      
+    //appleL
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 4000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newAppleL" + idNumber, "cherylappleL", "../images/appleL.png", thisTime, "L")
+    }, 20000)
+      
+    //vegI
+       setTimeout(function(){
+        var thisTime = Math.random()*1000 + 4000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newVegI" + idNumber, "cherylvegI", "../images/vegI.png", thisTime, "I4")
+    }, 21000)
+      
+    //cornT
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 4000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCornT" + idNumber, "cherylcornT", "../images/cornT.png", thisTime, "T1")
+    }, 22000)
+    
+    //carrotU
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 4000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCarrotU" + idNumber, "cherylcarrotU", "../images/carrotU.png", thisTime, "U1")
+    }, 23000)
+    
+    //appleD
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 3000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newAppleD" + idNumber, "cherylappleD", "../images/appleD.png", thisTime, "D")
+    }, 25000)
+      
+    //cornI
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 3000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCornI" + idNumber, "cherylcornI", "../images/cornI.png", thisTime, "I5")
+    }, 26000)
+    
+    //vegN
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 4000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newVegN" + idNumber, "cherylvegN", "../images/vegN.png", thisTime, "N2")
+    }, 27000)
+      
+    //carrotI
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 2000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCarrotI" + idNumber, "cherylcarrotI", "../images/carrotI.png", thisTime, "I6")
+    }, 28000)
+      
+    //appleT
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 3000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newAppleT" + idNumber, "cherylappleT", "../images/appleT.png", thisTime, "T2")
+    }, 31000)
+    
+    //vegA
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 2000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newVegA" + idNumber, "cherylvegA", "../images/vegA.png", thisTime, "A2")
+    }, 32000)
+      
+    //cornT
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 4000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCornT" + idNumber, "cherylcornT2", "../images/cornT.png", thisTime, "T3")
+    }, 33000)
+      
+    //carrotI
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 3000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCarrotI" + idNumber, "cherylcarrotI", "../images/carrotI.png", thisTime, "I7")
+    }, 33000)
+      
+    //appleB
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 3000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newAppleB" + idNumber, "cherylappleB2", "../images/appleB.png", thisTime, "B")
+    }, 34000)
+      
+    //vegU
+      setTimeout(function(){
+        var thisTime = Math.random()*1000 + 3000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newVegU" + idNumber, "cherylvegU", "../images/vegU.png", thisTime, "U2")
+    }, 35000)
+    
+    //cornS
+       setTimeout(function(){
+        var thisTime = Math.random()*1000 + 4000;
+        var idNumber = Math.round(Math.random()*1000)
+        
+        appendNewFood("newCornS" + idNumber, "cherylcornS", "../images/cornS.png", thisTime, "S")
+    }, 36000)
+    
+      
       
   });
 });

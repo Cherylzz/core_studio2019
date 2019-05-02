@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|VT323');
+
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.gameover {
+    font-family: 'press start 2p';
+    left: 35%;
+    top: 20%;
+    font-size: 40;
+    z-index: 4;
+    position: absolute;
+    color: white;
+}
+
+
+
+.ins {
+    position: absolute;
+    font-family: 'press start 2P';
+    left:32%;
+    top: 20%;
+}
+.zebra {
+    position: absolute;
+    left: 10%;
+    top:43%;
+}
+
+.flying {
+    width: 140%;
+}
+
+.Try {
+    position: absolute;
+    font-family: 'press start 2P';
+    left: 40%;
+    top: 30%;
+    font-size: 20;
+     -webkit-animation: blink 2s step-end infinite;
+}
+
+@-webkit-keyframes blink { 50% { visibility: hidden; }}
+        @keyframes blink { 50% { visibility: hidden; }}
