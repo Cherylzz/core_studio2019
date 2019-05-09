@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|VT323');
 
 body {
   margin: 0;
@@ -6,7 +7,7 @@ body {
 
 .bg {
   animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(90deg, orange 30%, purple 30%, blue 40%);
+  background-image: linear-gradient(-60deg, #ac4ccc 20%, #3a4bcc 20%);
   bottom:0;
   left:-50%;
   opacity:.5;
@@ -34,16 +35,28 @@ body {
   }
 }
 
+a:link {
+  text-decoration: none;
+}
+
+p {
+    font-family: 'press start 2P';
+}
 
 .game {
     position: relative;
-    top: 10%;
+    top: 7%;
     left: 30%;
 	animation: float 6s ease-in-out infinite;
+    filter: grayscale(100%);
 }
 
 .game:hover {
-    opacity: 0.6;
+    background: url(../gif/flying.gif) no-repeat;
+    display: inline-block;
+    background-size: 15%;
+    filter: grayscale(0%);
+    
 }
 
 @keyframes float {
@@ -63,12 +76,16 @@ body {
 
 
 .dialogue1 {
+    position: relative;
+    top: -30%;
+    left: 5%;
     overflow: hidden;
 	animation: float2 6s ease-in-out infinite;
+    filter: grayscale(100%);
 }
 
 .dialogue1:hover {
-    opacity: 0.6;
+    filter: grayscale(0%);
 }
 
 @keyframes float2 {
@@ -88,13 +105,14 @@ body {
 
 .dialogue2 {
     position: relative;
-    top: -50%;
-    left: 25%;
+    top: -90%;
+    left: 70%;
     animation: float3 6s ease-in-out infinite;
+    filter: grayscale(100%);
 }
 
 .dialogue2:hover {
-    opacity: 0.6;
+    filter: grayscale(0%);
 }
 
 @keyframes float3 {
@@ -114,13 +132,14 @@ body {
 
 .collection {
     position: relative;
-    top: -50%;
-    left: 25%;
+    top: -165%;
+    left: 100%;
     animation: float4 6s ease-in-out infinite;
+    filter: grayscale(100%);
 }
 
 .collection:hover {
-    opacity: 0.6;
+    filter: grayscale(0%);
 }
 
 @keyframes float4 {
@@ -128,12 +147,42 @@ body {
 		transform: translate(0,-20px);
 	}
 	50% {
-		transform: translate(-60px,-40px);
+		transform: translate(60px,-60px);
 	}
     70% {
-		transform: translate(-40px,-60px);
+		transform: translate(40px,-40px);
 	}
 	100% {
 		transform: translate(0,-20px);
 	}
 }
+
+
+.poster {
+    position: relative;
+    top: -200%;
+    left: 145%;
+    animation: float5 6s ease-in-out infinite;
+    filter: grayscale(100%);
+}
+
+.poster:hover {
+    filter: grayscale(0%);
+
+}
+
+@keyframes float5 {
+	0% {
+		transform: translate(0,-20px);
+	}
+	50% {
+		transform: translate(-60px,-40px);
+	}
+    70% {
+		transform: translate(-40px,20px);
+	}
+	100% {
+		transform: translate(0,-20px);
+	}
+}
+
