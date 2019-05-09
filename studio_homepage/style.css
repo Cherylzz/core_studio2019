@@ -1,16 +1,45 @@
-body{
-    background-color: black;
+
+body {
+  margin: 0;
+    padding: 0;
 }
 
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(90deg, orange 30%, purple 30%, blue 40%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+
 .game {
-    clip-path: circle(120px at 180px 120px);
     position: relative;
     top: 10%;
-    left: 10%;
+    left: 30%;
 	animation: float 6s ease-in-out infinite;
-    border: 1px solid white;
-    border-radius: 4px;
-
 }
 
 .game:hover {
@@ -34,8 +63,6 @@ body{
 
 
 .dialogue1 {
-    clip-path: circle(120px at 180px 120px);
-    mask-image: url("yoursvg.svg");
     overflow: hidden;
 	animation: float2 6s ease-in-out infinite;
 }
@@ -60,7 +87,6 @@ body{
 }
 
 .dialogue2 {
-    clip-path: circle(120px at 180px 120px);
     position: relative;
     top: -50%;
     left: 25%;
@@ -87,7 +113,6 @@ body{
 }
 
 .collection {
-    clip-path: circle(120px at 180px 120px);
     position: relative;
     top: -50%;
     left: 25%;
