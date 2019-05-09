@@ -16,6 +16,13 @@ body{
     color: white;
 }
 
+.starve {
+    top: 10%;
+    left: 35%;
+    position: absolute;
+    font-family: 'press start 2p';
+    color: white;
+}
 
 
 .ins {
