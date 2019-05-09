@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P|VT323');
 
-
-
-
   @media only screen 
   and (max-device-width: 405px) 
   and (max-device-width: 852px) 
@@ -35,9 +32,9 @@
 
 .title {
     position: absolute;
-    left: 20%;
+    left: 5%;
     font-family: 'press start 2P';
-    font-size: 25;
+    font-size: 40;
     top:2%;
 }
 
@@ -65,6 +62,7 @@ body {
 
 .road {
     position: fixed;
+    top: 5%;
     z-index: -3;
     left: 20%;
     min-height: 100vh;
@@ -331,7 +329,7 @@ button {
     background-color: white;
     color: #328ee5;
     position: absolute;
-    margin-top: 20%;
+    margin-top: 10%;
     margin-left: 5%;
     font-family: 'press start 2P';
     border-radius: 50px;
