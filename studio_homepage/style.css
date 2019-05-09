@@ -43,6 +43,35 @@ p {
     font-family: 'press start 2P';
 }
 
+.horizontal-scroll-wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.cursor {
+    width: 40%;
+    top:20%;
+    left: 60%;
+    position: fixed;
+    transform: rotate(70deg);
+    animation: blink 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .game {
     position: relative;
     top: 7%;
